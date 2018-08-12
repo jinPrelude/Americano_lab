@@ -1,5 +1,4 @@
 - 본 내용은 아메리카노 팀의 목표 "스타크레프트 인공지능 제작"을 성취하기 위한 연습의 일환입니다. 중간 과정이 도움이 될 것이라고 생각하여 올립니다! Continuous space 환경에서 DDPG 알고리즘을 사용하였고, 코드를 이해하기 쉽도록 주석을 달아놓았습니다. 의식의 흐름대로 쓴 주석이라 지속적으로 수정하도록 하겠습니다ㅎ
-- 개인 프로젝트 주소 : https://github.com/jinprelude/reinforcement_learning
 
 # Pendulum ai using DDPG algorithm
 <div align="center">
