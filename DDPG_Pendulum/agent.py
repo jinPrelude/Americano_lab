@@ -21,11 +21,11 @@ class ActorNetwork(object):
         #
         self.network_params = tf.trainable_variables()
 
-        # Target Actor network를 생성.
+        # Target Actor network를 생성
         with tf.variable_scope('target_actor_network') :
             self.target_inputs, self.target_out, self.target_scaled_out = self.create_actor_network()
 
-        # It stores the parameters the target network has.
+        # It stores the parameters the target network has
         # tf.trainable_variables 에 network_params 다음 target_network_params가 바로 이어져 있어서
         # 슬라이싱을 해줌
         self.target_network_params = tf.trainable_variables()[
@@ -41,7 +41,7 @@ class ActorNetwork(object):
                                                   tf.multiply(self.target_network_params[i], 1. - self.tau)) for i in range(len(self.target_network_params))]
 
         # critic network에게 제공받을 placeholder
-        #  action의 gradient임.
+        #  action의 gradient임
         self.action_gradient = tf.placeholder(tf.float32, [None, self.a_dim])
 
         # Combine the gradients here
